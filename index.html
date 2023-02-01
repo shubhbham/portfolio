@@ -1,0 +1,688 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 10;
+            padding: 10;
+        }
+
+        .container {
+
+            /* Smartphones */
+
+            @media only screen and (min-device-width : 320px) and (max-device-width : 480px) {
+                /* Styles */
+            }
+
+            /* iPads */
+            @media only screen and (min-device-width : 768px) and (max-device-width : 1024px) {
+                /* Styles */
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="code-wrap">
+            <pre>
+                <code id="code">
+                <h2>lab 1a</h2>
+                import java.util.Scanner;
+
+public class Student {
+
+			String USN;//USN
+			String Name;//Name
+			String Branch;//Branch
+			Long Phone;//Phone number
+			 
+			public Student(String U,String N,String B,Long P)
+			{
+				this.USN=U;
+				this.Name=N;
+				this.Branch=B;
+				this.Phone=P;
+			}
+		
+			public static void main(String args[])
+			{
+				Scanner input=new Scanner(System.in);
+				System.out.println("enter number of Students:");
+				int n=input.nextInt();
+				Student[] s=new Student[n];//array of objects definition
+				System.out.println("enter student details:");
+				<!-- for(int i=0;i<n;i++ ) -->
+				{
+					System.out.println((i+1)+"Student details:");
+					System.out.println("USN");
+					String USN=input.next();
+					System.out.println("Name");
+					String Name=input.next();
+					System.out.println("Branch");
+					String Branch=input.next();
+					
+					System.out.println("Phone");
+					Long Phone=input.nextLong();
+					
+				s[i]=new Student(USN,Name,Branch,Phone);//instanting each object
+				
+}
+				System.out.println("Student Details:");
+				System.out.println("USN"+"\t"+"Name"+"\t"+"Branch"+"\t"+"Phone");
+				System.out.println("-----------------------------");
+				import java.util.Scanner;
+
+public class Student {
+
+			String USN;//USN
+			String Name;//Name
+			String Branch;//Branch
+			Long Phone;//Phone number
+			 
+			public Student(String U,String N,String B,Long P)
+			{
+				this.USN=U;
+				this.Name=N;
+				this.Branch=B;
+				this.Phone=P;
+			}
+		
+			public static void main(String args[])
+			{
+				Scanner input=new Scanner(System.in);
+				System.out.println("enter number of Students:");
+				int n=input.nextInt();
+				Student[] s=new Student[n];//array of objects definition
+				System.out.println("enter student details:");
+                --should do only i less than n---
+				for(int i=0;i<=n;i++)
+				{
+					System.out.println((i+1)+"Student details:");
+					System.out.println("USN");
+					String USN=input.next();
+					System.out.println("Name");
+					String Name=input.next();
+					System.out.println("Branch");
+					String Branch=input.next();
+					
+					System.out.println("Phone");
+					Long Phone=input.nextLong();
+					
+				s[i]=new Student(USN,Name,Branch,Phone);//instanting each object
+				
+}
+				System.out.println("Student Details:");
+				System.out.println("USN"+"\t"+"Name"+"\t"+"Branch"+"\t"+"Phone");
+				System.out.println("-----------------------------");
+                --should do only i less than n--- not = to remove it
+                for(int i=0;i<=n;i++)
+				{
+				    System.out.println(s[i].USN+"\t"+s[i].Name+"\t"+s[i].Branch+"\t"+s[i].Phone);	
+			}
+
+		}
+		}
+
+				{
+				    System.out.println(s[i].USN+"\t"+s[i].Name+"\t"+s[i].Branch+"\t"+s[i].Phone);	
+			}
+
+		}
+		}
+
+        <h2>lab 1b</h2>
+
+
+        import java.util.Scanner;
+public class Stack 	
+{
+	int top;  int size;
+	int[] stk;
+	public Stack()
+	{
+		size=3;
+		top=-1;
+		stk=new int[10];
+	}
+	@SuppressWarnings("resource")
+	void push()
+	{
+		if(top>=size-1)
+		{
+			System.out.println("stack overflow");
+			return;
+		}
+		top=top+1;
+		Scanner input=new Scanner(System.in);
+		System.out.println("enter an element to push");
+		stk[top]=input.nextInt();
+		}
+	void pop()
+	{
+		if(top==-1)
+		{
+			System.out.println("stack underflow");
+			return;
+		}
+			int del_item=stk[top];
+			top=top-1;
+			System.out.println("popped item="+del_item);
+	}
+	void display()
+	{
+		if(top==-1)
+		{
+			System.out.println("stack underflow");
+			return;		
+		}
+		for(int i=top;i>=0;i--)
+		{
+			System.out.println("stack["+i+"]:"+stk[i]);
+		}
+	}
+@SuppressWarnings("resource")
+public static void main(String args[])
+{
+	Stack obj=new Stack();
+	Scanner input=new Scanner(System.in);
+	for(;;)
+	{
+		System.out.println("---Stack Operation---");
+		System.out.println("1:push\n 2:pop\n 3:display\n 4:exit");
+		System.out.println("enter your choice:");
+		int choice=input.nextInt();
+		switch(choice)
+		{
+		case 1:obj.push();
+			   break;
+		case 2:obj.pop();
+		   break;
+		case 3:obj.display();
+		   break;
+		    default:System.out.println("invalid choice");
+			   System.exit(1);
+		}
+	}
+}
+}
+	<h2>lab 2a</h2>
+
+    import java.util.Scanner;
+
+class Staff
+{
+	String StaffID, Name, Phone, Salary;
+	Scanner input = new Scanner(System.in);
+
+	void read()
+             {
+		System.out.println("Enter StaffID");
+		StaffID = input.nextLine();
+
+		System.out.println("Enter Name");
+		Name = input.nextLine();
+
+		System.out.println("Enter Phone");
+		Phone = input.nextLine();
+
+		System.out.println("Enter Salary");
+		Salary = input.nextLine();
+	}
+
+	void display()
+             {
+		System.out.printf("\n%-15s", "STAFFID: ");
+		System.out.printf("%-15s \n", StaffID);
+		System.out.printf("%-15s", "NAME: ");
+		System.out.printf("%-15s \n", Name);
+		System.out.printf("%-15s", "PHONE:");
+		System.out.printf("%-15s \n", Phone);
+		System.out.printf("%-15s", "SALARY:");
+		System.out.printf("%-15s \n", Salary);
+	}
+}//end of Staff superclass
+
+
+class Teaching extends Staff 
+{
+	String Domain, Publication;
+
+	void read_Teaching()
+             {
+		super.read(); // call super class read method
+		System.out.println("Enter Domain:");
+		Domain = input.nextLine();
+		System.out.println("Enter Publication:");
+		Publication = input.nextLine();	
+	}
+
+	void display()
+             {
+		super.display(); // call super class display() method
+		System.out.printf("%-15s", "DOMAIN:");
+		System.out.printf("%-15s \n", Domain);
+		System.out.printf("%-15s", "PUBLICATION:");
+		System.out.printf("%-15s \n", Publication);
+	}
+}//end of Teaching subclass
+
+
+class Technical extends Staff
+{
+	String Skills;
+
+	void read_Technical()
+              {
+		super.read(); // call super class read method
+		System.out.println("Enter Skills:");
+		Skills = input.nextLine();
+	}
+
+	void display()
+              {
+		super.display(); // call super class display() method
+		System.out.printf("%-15s", "SKILLS:");
+		System.out.printf("%-15s \n", Skills);
+	}
+}//end of Technical class
+
+
+class Contract extends Staff
+{
+	String Period;
+
+	void read_Contract()
+             {
+		super.read(); 
+		System.out.println("Enter Period");
+		Period = input.nextLine();
+	}
+
+	void display()
+             {
+		super.display(); 
+		System.out.printf("%-15s", "PERIOD:");
+		System.out.printf("%-15s \n", Period);
+	}
+}//end of Contract subclass
+
+public class DemoStaff
+{
+	public static void main(String[] args)
+              {
+
+		Scanner input = new Scanner(System.in);
+
+		System.out.println("Enter number of staff details to be created");
+		int n = input.nextInt();
+
+		Teaching steach[] = new Teaching[n];
+		Technical stech[] = new Technical[n];
+		Contract scon[] = new Contract[n];
+
+		// Read Staff information under 3 categories
+
+		for (int i = 0; i < n; i++)
+                             {
+			System.out.println("Enter Teaching staff information");
+			steach[i] = new Teaching();
+			steach[i].read_Teaching();
+		}
+
+		for (int i = 0; i < n; i++)
+                            {
+			System.out.println("Enter Technical staff information");
+			stech[i] = new Technical();
+			stech[i].read_Technical();
+		}
+
+		for (int i = 0; i < n; i++)
+                             {
+			System.out.println("Enter Contract staff information");
+			scon[i] = new Contract();
+			scon[i].read_Contract();
+		}
+
+		// Display Staff Information
+		System.out.println("\n STAFF DETAILS: \n");
+		System.out.println("-----TEACHING STAFF DETAILS----- ");
+
+		for (int i = 0; i < n; i++)
+                            {
+			steach[i].display();
+		}
+
+		System.out.println("\n-----TECHNICAL STAFF DETAILS-----");
+		for (int i = 0; i < n; i++) 
+                            {
+			stech[i].display();
+		}
+
+		System.out.println("\n-----CONTRACT STAFF DETAILS-----");
+		for (int i = 0; i < n; i++)
+                            {
+			scon[i].display();
+		}
+		
+		input.close();
+	}//end of main method
+}//end of class DemoStaff
+
+<h2>lab 2b</h2>
+
+import java.util.Scanner;
+import java.util.StringTokenizer;
+
+public class lab2b {
+	String name;
+	String date_of_birth;
+	void display(String name,String date)
+	{
+		StringTokenizer to=new StringTokenizer(date,"/");
+		String temp=to.nextToken();
+		int dd= Integer.parseInt(temp);
+		temp=to.nextToken();
+		int mm=Integer.parseInt(temp);
+		temp=to.nextToken();
+		int yyyy=Integer.parseInt(temp);
+		System.out.println(name+","+dd+","+mm+","+yyyy);
+	}
+	void readCust()
+	{
+		Scanner sc=new Scanner(System.in);
+		System.out.println("enter name");
+		String name=sc.next();
+		System.out.println("enter date of birth");
+		String date=sc.next();
+		display(name,date);
+	
+}
+	public static void main(String[] args) {
+		
+lab2b obj=new lab2b();
+
+obj.readCust();
+
+	}
+}
+
+
+<h2>lab 3a</h2>
+
+import java.util.Scanner;
+
+public class lab3a {
+
+	public static void main(String[] args) {
+		
+Scanner input=new Scanner(System.in);
+System.out.println("Enter TWO numbers :");
+double number1=input.nextDouble();
+double number2=input.nextDouble();
+Double quotient=(number1 / number2);
+System.out.println("The quotient is "  + quotient);
+if(number2!=0)
+{
+	System.out.println("the value of number1   "  +number1);
+	System.out.println("the value of number2   "  +number2);
+	
+}
+else
+	throw new ArithmeticException("Not valid");
+	}
+
+}
+
+<h2>lab 3b</h2>
+
+import java.util.Random;
+import java.util.Scanner;
+class Random_Num_Thread extends Thread {
+public void run() {
+Random rand;
+int i = 0;
+do {
+rand = new Random();
+System.out.print(rand.nextInt(100)+" ");
+i++;
+try {
+Thread.sleep(10);
+} catch (InterruptedException e) {
+e.printStackTrace();
+}
+} while (i < 10);
+}
+}
+class Square_Num extends Thread {
+int n;
+public void run() {
+System.out.println("Square of a Number "+this.n+" is:"+Math.pow(this.n, 2));
+}
+public Square_Num(int a) {
+this.n = a;
+}
+}
+class Cube_Num extends Thread {
+int n;
+public void run() {
+System.out.println("\nCube of a Number "+this.n+" is:"+Math.pow(this.n, 3));
+}
+public Cube_Num(int a) {
+this.n = a;
+}
+}
+public class Lab3B {
+public static void main(String[] args) {
+	//Scanner sc=new Scanner(System.in);
+	
+Thread thread1 = new Random_Num_Thread();
+thread1.start();
+
+
+Thread thread2 = new Square_Num(2);
+thread2.start();
+Thread thread3 = new Cube_Num(2);
+thread3.start();
+}
+}
+
+<h2>lab 4</h2>
+
+
+package labprogram;
+import java.util.Scanner;
+import java.util.Random;
+
+
+public class qsort {
+	int Partition(int a[],int low,int high)
+	{
+	  int i,j,temp,key;
+	  
+	  key=a[low];
+	  i=low+1;
+	  j=high;
+
+	  while(true)
+	   {
+	     while(i < high && key >= a[i]) i++;
+	     while(key < a[j]) j--;
+
+	     if(i<=j)			// make it less than only no =
+	      {
+	    	temp=a[i];
+		    a[i]=a[j];
+		    a[j]=temp;
+	      }
+	      else			
+	      {
+	       temp=a[low];
+	       a[low]=a[j];
+	       a[j]=temp;
+	       return j;		
+	      }
+	   }//end of while
+	}//end of Paritition method
+
+        void QuickSort(int a[],int low,int high)
+	{
+	 int j;
+	 if(low<=high)  //make it less than only no =
+	  {
+	    j=Partition(a,low,high);
+	    QuickSort(a,low,j-1);
+	    QuickSort(a,j+1,high);
+	  }
+	}
+
+        public static void main(String args[])
+        {
+         // Random r = new Random();
+          final int MAX = 10000;
+          int[] a = new int[MAX];
+          qsort obj = new qsort();
+          int n=0,i=0;
+          
+          Scanner input = new Scanner(System.in);
+          System.out.print("\n Enter the number of elements : ");
+          try {
+        	  n=input.nextInt();
+        	  System.out.print("\n Enter the elements \n");
+              for(i=0;i<=n;i++) //make it less than only no =
+              a[i] = input.nextInt(); 
+              //a[i] = r.nextInt(1000);
+              //Arrays.sort(a); 
+        	  } 
+          finally 
+          {
+        	  input.close();     
+          }
+
+         
+
+          long stime=0, etime=0;
+          stime = System.nanoTime();
+   
+          obj.QuickSort(a,0,n-1);
+   
+          etime = System.nanoTime();
+   
+          System.out.print("\n The sorted elements are \n");
+          for(i=0;i<=n;i++) //make it less than only no =
+              System.out.print(a[i]+"\t");
+   
+          long Tcomplexity = etime - stime;
+          System.out.println("\nTime Complexity  for n = " + n + " is: " + (double) Tcomplexity / 1000000 + " msec");
+          input.close(); 
+       }//end of main method
+}//end of QSort class
+
+
+<h2>lab 5</h2>
+
+package mergesort;
+import java.util.Scanner;
+//import java.util.Random;
+//import java.util.Arrays;
+
+public class mergesort
+{
+	void Merge(int a[],int low,int mid,int high)
+	 {
+	   int i,j,k;
+	   int[] b=new int[10000];
+	   i=low;
+	   j=mid+1;
+	   k=low;
+	   while((i<=mid) && (j<=high))
+	    {
+	     if(a[i]<=a[j])  // make it less than only no =
+	      {
+		  b[k]=a[i];
+		  k=k+1;
+		  i=i+1;
+	      }
+	     else
+	      {
+		  b[k]=a[j];
+		  k=k+1;
+		  j=j+1;
+	      }
+	   }
+	   while(i<=mid)
+	    {
+	       b[k]=a[i];
+	       k=k+1;
+	       i=i+1;
+	    }
+	  while(j<=high)
+	   {
+	     b[k]=a[j];
+	     k=k+1;
+	     j=j+1;
+	   }
+	  for(i=low;i<=k-1;i++)
+	    a[i]=b[i];
+	}
+
+	void MergeSort(int a[],int low,int high)
+	{
+	 int mid;
+	 if(low<=high) // make it less than only no =
+	  {
+	    mid=(low+high)/2;
+	    MergeSort(a,low,mid);
+	    MergeSort(a,mid+1,high);
+	    Merge(a,low,mid,high);
+		  }
+		}
+	    public static void main(String args[])
+	    {
+	      //Random r = new Random();
+	      final int MAX = 10000;
+	      int[] a = new int[MAX];
+	      mergesort obj = new mergesort();
+	      int n=0;
+	      
+	      Scanner input = new Scanner(System.in);
+	      System.out.print("\n Enter the number of elements : ");
+	      n=input.nextInt();
+
+	      System.out.print("\n Enter the elements \n");
+	      for(int i=0;i<=n;i++)  // make it less than only no =
+	       a[i] = input.nextInt();
+	       //a[i] = r.nextInt(1000);
+	       //Arrays.sort(a); 
+
+	      long stime=0, etime=0;
+	      stime = System.nanoTime();
+
+	           obj.MergeSort(a,0,n-1);
+
+	      etime = System.nanoTime();
+
+	      System.out.print("\n The sorted elements are \n");
+	      for(int i=0;i<=n;i++)  // make it less than only no =
+	          System.out.print(a[i]+"\t");
+
+	      long Tcomplexity = etime - stime;
+	      System.out.println("\nTime Complexity  for n = " + n + " is: " + (double) Tcomplexity / 1000000 + " msec");
+
+	      input.close(); 
+	   }//end of main method
+	}//end of MSortDemo class
+
+            </code>
+            </pre>
+        </div>
+    </div>
+</body>
+
+</html>
